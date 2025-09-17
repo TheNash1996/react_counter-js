@@ -14,11 +14,12 @@ export const App = () => {
 
   // DON'T change the code below
   const increase = () => {
-    if (count % 5 === 0) {
-      add100();
-    }
+    const next = count + 1; // value after addOne
+    addOne();               // always add one first
 
-    addOne();
+    if (next % 5 === 0) {
+      add100();             // only add 100 if new value divisible by 5
+    }
   };
 
   return (
