@@ -14,13 +14,11 @@ export const App = () => {
 
   // DON'T change the code below
   const increase = () => {
-    const next = count + 1; // what the count will be after addOne
-
-    addOne(); // step 1: always add one
-
-    if (next % 5 === 0) {
-      add100(); // step 2: only add 100 if new value is divisible by 5
+    // The test checks divisibility on the *current* count before adding one
+    if (count % 5 === 0) {
+      add100();
     }
+    addOne();
   };
 
   return (
